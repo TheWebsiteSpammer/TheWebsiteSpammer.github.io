@@ -59,21 +59,21 @@
         document.getElementById('start').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
                 let newWebsite = document.createElement('iframe');
-                newWebsite.src = 'https://www.example.com';
+                newWebsite.src = 'Chrome://new-tab-page';
                 websiteContainer.appendChild(newWebsite);
             }, 1000); // Change the interval time as needed
         });
 
         document.getElementById('crazy').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
-                window.open('https://www.example.com', '_blank');
+                window.open('Chrome://new-tab-page', '_blank');
             }, 0); // Change the interval time as needed
         });
 
         document.getElementById('never').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
                 let newWebsite = document.createElement('iframe');
-                newWebsite.src = 'https://www.example.com';
+                newWebsite.src = 'Chrome://new-tab-page';
                 websiteContainer.appendChild(newWebsite);
             }, 0); // Change the interval time as needed
         });
