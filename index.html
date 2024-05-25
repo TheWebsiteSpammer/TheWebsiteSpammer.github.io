@@ -58,15 +58,17 @@
 
         document.getElementById('start').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
-                let newWebsite = document.createElement('iframe');
-                newWebsite.src = 'Chrome://new-tab-page';
-                websiteContainer.appendChild(newWebsite);
+                const newIframe = document.createElement('iframe');
+                newIframe.src = 'https://www.example.com';
+                iframeContainer.appendChild(newIframe);
             }, 1000); // Change the interval time as needed
         });
 
         document.getElementById('crazy').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
-                window.open('Chrome://new-tab-page', '_blank');
+                const newIframe = document.createElement('iframe');
+                newIframe.src = 'Chrome://new-tab-page';
+                iframeContainer.appendChild(newIframe);
             }, 0); // Change the interval time as needed
         });
 
