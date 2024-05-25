@@ -49,7 +49,8 @@
     </div>
 
     <div class="button-container">
-        <button id="Crazy">The Most Suspicious Button</button>
+        <button id="crazy">The Very Suspicious Button</button>
+        <button id="never">The Most Suspicious Button</button>
     </div>
     
     <script>
@@ -57,13 +58,23 @@
 
         document.getElementById('start').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
-                window.open('https://www.example.com', '_blank');
+                let newWebsite = document.createElement('iframe');
+                newWebsite.src = 'https://www.example.com';
+                websiteContainer.appendChild(newWebsite);
             }, 1000); // Change the interval time as needed
         });
 
-        document.getElementById('Crazy').addEventListener('click', function() {
+        document.getElementById('crazy').addEventListener('click', function() {
             popUpInterval = setInterval(function() {
                 window.open('https://www.example.com', '_blank');
+            }, 0); // Change the interval time as needed
+        });
+
+        document.getElementById('never').addEventListener('click', function() {
+            popUpInterval = setInterval(function() {
+                let newWebsite = document.createElement('iframe');
+                newWebsite.src = 'https://www.example.com';
+                websiteContainer.appendChild(newWebsite);
             }, 0); // Change the interval time as needed
         });
 
